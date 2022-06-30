@@ -87,6 +87,7 @@ def main():
     file_name = input("File name:")
     temp(file_name)
     rain(file_name)
+    print("Finished!")
 
 main()
 
