@@ -40,8 +40,6 @@ def rain(file_name):
         dct['rain'].append(data_r)
 
     return(dct)
-    # with open('Pre_'+file+'.json','w') as outfile:
-    #    outfile.write(json.dumps(dct, indent=2, ensure_ascii=False))
 
 
 def temp(file_name):
@@ -80,8 +78,6 @@ def temp(file_name):
         dct['temp'].append(data_r)
 
     return(dct)
-   # with open('Tmean_'+file+'.json','w') as outfile:
-   #     outfile.write(json.dumps(dct, indent=2, ensure_ascii=False))
 
 
 def dictionary_merge(file_name):
@@ -99,8 +95,7 @@ def dictionary_merge(file_name):
 
 def main():
     file_name = input("File name:")
-    # temp(file_name)
-    # rain(file_name)
+
     dictionary_merge(file_name)
     print("Finished!")
 
