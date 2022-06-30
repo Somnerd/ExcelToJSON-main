@@ -9,10 +9,10 @@ def main():
 
     file = input("File name:")
 
-    excel_data_df = pandas.read_excel(file+'.xls',  ) 
+    excel_data_df = pandas.read_excel('Tmean_'+file+'.xls',  ) 
 
     dct = {
-        'rain':[]        
+        'temp':[]        
     }
 
     for index, row in excel_data_df.iterrows():
@@ -39,9 +39,9 @@ def main():
             data_r['rcp85'] = rcp85
         
 
-        dct['rain'].append(data_r)
+        dct['temp'].append(data_r)
 
-    with open(file+'.json','w') as outfile:  
+    with open('Tmean_'+file+'.json','w') as outfile:  
         outfile.write(json.dumps(dct, indent=2, ensure_ascii=False))
    
 main()
